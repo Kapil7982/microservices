@@ -39,7 +39,7 @@ public class StudentService {
 	    
 	    if(student.isPresent())
 	    {
-	        String url = String.format("http://localhost:8080/school/%s", student.get().getSchoolId());
+	        String url = String.format("http://SCHOOLMICROSERVICES/school/%s", student.get().getSchoolId());
 	        School school = restTemplate.getForObject(url, School.class);
 	        StudentResponse studentResponse = new StudentResponse(
 	            student.get().getId(),
